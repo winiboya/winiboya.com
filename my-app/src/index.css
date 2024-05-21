@@ -1,10 +1,18 @@
-/* App.css */
+/* Base Styles */
+:root {
+	--floral-white: #fff8ef;
+	--sunglow: #ffce56;
+	--burnt-sienna: #eb6a51;
+	--air-force-blue: #6689a1;
+	--outer-space: #4c5b61;
+}
 
 body {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
     font-family: "League Spartan", sans-serif;
+    background-color: var(--floral-white);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -12,169 +20,3 @@ body {
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
   }
-  
-  .App {
-    text-align: center;
-    background-color: #ffce56;
-  }
-  
-  .AppHeader {
-    height: 80px;
-    padding: 25px 50px;
-    background-color: #fff8ef;
-    color: black;
-    position: sticky;
-    top: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 500;
-    box-sizing: border-box; /* Ensure padding is included in the height calculation */
-  }
-  
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .nav-links, .nav-links-mobile{
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    justify-content: flex-end;
-    margin: 0;
-    font-size: 1.2rem;
-  }
-
-  .nav-links {
-    align-items: center;
-  }
-  
-  .nav-links li, .nav-links-mobile li{
-    display: inline;
-  }
-  
-  .nav-links a, .nav-links-mobile a {
-    color: black;
-    text-decoration: none;
-  }
-  
-  .site-name {
-    margin-right: auto;
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  .site-name a {
-    color: black;
-    text-decoration: none;
-  }
-  
-  .hamburger, .close-icon-container {
-    display: none; /* Hide by default */
-    cursor: pointer;
-    font-size: 1.5rem;
-    position: absolute;
-    top: 25px;
-    right: 20px;
-    width: 30px; /* Adjusted width to match */
-    height: 30px; /* Adjusted height to match */
-    z-index: 1100;
-  }
-  
-  .hamburger-icon {
-    font-weight: 700;
-  }
-  
-  .close-icon {
-    font-weight: 500;
-    font-size: 2rem;
-  }
-  
-  .RightNav {
-    display: none; /* Ensure it's not displayed on large screens by default */
-  }
-
-  .ContactButton {
-    background-color: #6689A1;
-    padding: 10px 20px;
-    border-radius: 5px;
-  }
-
-  .ContactButton a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  @media (max-width: 768px) {
-    .AppHeader {
-      height: 80px;
-      padding: 25px 20px;
-    }
-    .hamburger, .close-icon-container {
-      display: block; /* Show hamburger and close icons in mobile view */
-    }
-    .nav-links {
-      display: none; /* Hide the nav links in mobile view */
-    }
-  
-    .RightNav {
-      background-color: #fff8ef;
-      position: fixed;
-      top: 0;
-      right: 0;
-      height: 100%;
-      width: 50%; /* Adjust as needed */
-      z-index: 1001; /* Ensure it is above the overlay */
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-end;
-      padding-top: 80px; /* Adjust to match the height of the header */
-      transition: right 0.3s ease; /* Smooth transition */
-      display: none; /* Hide by default, will show when 'open' */
-    }
-  
-    .RightNav.open {
-      display: flex;
-    }
-  
-    .nav-links-mobile {
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        text-align: right;
-        margin: 0;
-        padding: 0 25px 25px;
-        width: 100%;
-      }
-    
-      .nav-links-mobile li {
-        margin: 10px 0;
-      }
-  
-    .hamburger.open .hamburger-icon {
-      display: none;
-    }
-  
-    .close-icon-container {
-      display: block;
-    }
-  
-    .overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5); /* Darken the background */
-      z-index: 1000; /* Ensure it is below the .RightNav but above the header */
-    }
-  }
-  
-  section {
-    padding: 100px 20px;
-    min-height: 100vh;
-  }
-  

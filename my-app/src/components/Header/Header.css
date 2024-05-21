@@ -1,0 +1,175 @@
+/* HEADER STYLES */
+
+.app-header {
+	height: 80px;
+	padding: 25px 80px;
+	background-color: var(--floral-white);
+	color: black;
+	position: sticky;
+	top: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 500;
+	box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+	.app-header {
+		height: 80px;
+		padding: 25px 20px;
+	}
+}
+
+/* Main Navigation Links */
+
+.site-name {
+	margin-right: auto;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.site-name a {
+	color: black;
+	text-decoration: none;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+.nav-links {
+	list-style: none;
+	display: flex;
+	gap: 20px;
+	justify-content: flex-end;
+	margin: 0;
+	font-size: 1.2rem;
+}
+
+.nav-links {
+	align-items: center;
+}
+
+.nav-links li {
+	display: inline;
+}
+
+.nav-links a {
+	color: black;
+	text-decoration: none;
+}
+
+
+@media (max-width: 768px) {
+	.nav-links {
+		display: none; 
+	}
+	.nav-links-mobile {
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		text-align: right;
+		margin: 0;
+		padding: 0 25px 25px;
+		width: 100%;
+		font-size: 1.2rem;
+	}
+
+	.nav-links-mobile a {
+		color: black;
+		text-decoration: none;
+	}
+	.nav-links-mobile li {
+		margin: 10px 0;
+		display: inline;
+	}
+}
+
+/* Mobile Menu */
+
+.hamburger,
+.close-icon-container {
+	display: none;
+	cursor: pointer;
+	font-size: 1.5rem;
+	position: absolute;
+	top: 25px;
+	right: 20px;
+	width: 30px;
+	height: 30px;
+	z-index: 1100;
+}
+
+.hamburger-icon {
+	font-weight: 700;
+}
+
+.close-icon {
+	font-weight: 500;
+	font-size: 2rem;
+}
+
+.right-nav {
+	display: none;
+}
+
+.contact-button {
+	background-color: var(--burnt-sienna);
+	padding: 10px 20px;
+	border-radius: 5px;
+}
+
+.contact-button a {
+	color: white;
+	text-decoration: none;
+}
+
+@media (max-width: 768px) {
+	.hamburger,
+	.close-icon-container {
+		display: block;
+	}
+
+	.right-nav {
+		background-color: var(--floral-white);
+		position: fixed;
+		top: 0;
+		right: 0;
+		height: 100%;
+		width: 60%;
+		z-index: 1001;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-end;
+		padding-top: 80px;
+		transition: right 0.3s ease;
+		display: none;
+	}
+
+	.right-nav.open {
+		display: flex;
+	}
+
+	.hamburger.open .hamburger-icon {
+		display: none;
+	}
+
+	.close-icon-container {
+		display: block;
+	}
+
+    .contact-button {
+        background-color: transparent;
+        padding: 0;
+        border-radius: 0;
+    }
+    
+    .contact-button a {
+        color: black;
+    }
+
+}
